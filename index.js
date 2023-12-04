@@ -122,5 +122,37 @@ const questions = [
 
 function generateREADME(answers){
     return `
+    # ${answers.title}
+    
+    ## Description
+    ${answers.description}
+    
+    ## Table of Contents
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+
+    ## Installation
+    ${answers.installation}
+
+    ## Usage
+    ${answers.usage}
+
+    ## Contributing
+    ${answers.contributing}
+
+    ## Tests
+    ${answers.tests}
+
+    ## License
+    ${answers.license}
+
+    ## Questions
+    For any questions please email me at [${answers.email}](mailto:${answers.email}).
+
+    Github: ${answers.github}(https://github.com/${answers.github})
     `
 }
