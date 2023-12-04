@@ -71,36 +71,56 @@ promptUser()
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-function promptUser(){
-    return inquirer.prompt([
-        {
-            type: 'input',
-            name: 'title',
-            message: 'What is the name of your project?'
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Provide a short description explaining the what, why, and how of your project.'
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'What are the steps required to install your project?'
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'Provide instructions and examples of what this project may be used for.'
-        },
-        {
-            type: 'input',
-            name: 'license',
-            message: 'Please include any licenses that may apply to your project.'
-        }
-    ]);
-}
+const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?'
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Enter a description of your project:'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Enter installation instructions:'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter usage information:'
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Enter contribution guidelines:'
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Enter test instructions:'
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your application:',
+        choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'None']
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub username:'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address:'
+    }
+];
 
-function generateHTML(answers){
-    return ``
+function generateREADME(answers){
+    return `
+    `
 }
