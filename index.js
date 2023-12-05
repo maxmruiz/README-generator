@@ -1,80 +1,12 @@
-/**
- * // Importing modules
-const inquirer = require('inquirer');
-const fs = require('fs');
-
-function promptUser() {
-    return inquirer.prompt([
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is your name?'
-        },
-        {
-            type: 'input',
-            name: 'food',
-            message: 'What is your favorite food?'
-        },
-        {
-            type: 'input',
-            name: 'place',
-            message: 'Where are you from?'
-        },
-        {
-            type: 'input',
-            name: 'bio',
-            message: 'Write a short description about yourself'
-        },
-        {
-            type: 'checkbox',
-            name: 'languages',
-            message: 'What languages do you know?',
-            choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'React', 'C#']
-        },
-        {
-            type: 'input',
-            name: 'github',
-            message: 'Enter your GitHub profile URL:'
-        }
-    ]);
-}
-
-function generateHTML(answers) {
-    return `
-    ${answers.name}
-    ${answers.food}
-    ${answers.place}
-    ${answers.bio}
-    ${answers.languages}
-    ${answers.github}
-    `;
-    //HTML will go here
-}
-
-promptUser()
-    .then(answers => {
-        const htmlContent = generateHTML(answers);
-        fs.writeFile('portfolio.html', htmlContent, err => {
-            if (err) {
-                console.error('Error writing file', err);
-                return;
-            }
-            console.log('Portfolio generated');
-        });
-    })
-    .catch(err => {
-        console.error('Error', err);
-    });
-
- */
-
+// Importing necessary packages
 import inquirer from 'inquirer';
 import fs from 'fs';
 
+// Declaring each necessary question pertaining to README to an array
 const questions = [
     {
         type: 'input',
-        name: 'title',
+        name: 'title', // name: is how I will be calling each questions answer
         message: 'What is the title of your project?'
     },
     {
@@ -120,6 +52,7 @@ const questions = [
     }
 ];
 
+// Creating the template for README, ${answers...} is the answer the user provided for each appropriate section
 function generateREADME(answers){
     return`
 # ${answers.title}
@@ -157,10 +90,12 @@ Github: ${answers.github}(https://github.com/${answers.github})
 `;
 }
 
+// Declaring a function to create the README file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
 }
 
+// init() is where the file is being created. Once each question has been answered, a README.md file will be creating using the template with the users answers
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
@@ -172,4 +107,5 @@ function init() {
     });
 }
 
+// Calling init() to run
 init();
