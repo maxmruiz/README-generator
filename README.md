@@ -11,4 +11,4 @@ The primary language I used was Javascript along with:
 </ol>
 
 ## Link to walkthrough
-If you would like to see how this program works, click this [link]().
+If you would like to see how this program works, click this [link](https://youtu.be/7PYpllSumhQ).
