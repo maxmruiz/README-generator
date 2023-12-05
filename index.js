@@ -154,5 +154,22 @@ function generateREADME(answers){
     For any questions please email me at [${answers.email}](mailto:${answers.email}).
 
     Github: ${answers.github}(https://github.com/${answers.github})
-    `
+    `;
 }
+
+function writeToFile(fileName, data) {
+    fs.writeFileSync(fileName, data);
+}
+
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => {
+        const readMeContent = generateREADME(answers);
+        writeToFile('README.md', readMeContent);
+    })
+    .catch((error) => {
+        console.log('Could not create file:', error);
+    });
+}
+
+init();
