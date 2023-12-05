@@ -86,7 +86,7 @@ ${answers.tests}
 ## Questions
 For any questions please email me at [${answers.email}](mailto:${answers.email}).
 
-Github: ${answers.github}(https://github.com/${answers.github})
+Github: [${answers.github}](https://github.com/${answers.github})
 `;
 }
 

@@ -30,4 +30,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat arcu vel
 ## Questions
 For any questions please email me at [mmfern2003@gmail.com](mailto:mmfern2003@gmail.com).
 
-Github: maxmruiz(https://github.com/maxmruiz)
+Github: [maxmruiz](https://github.com/maxmruiz)
