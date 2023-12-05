@@ -81,7 +81,7 @@ ${answers.contributing}
 ${answers.tests}
 
 ## License
-${answers.license}
+![GitHub license](https://img.shields.io/badge/license-${encodeURIComponent(answers.license)}-blue.svg)
 
 ## Questions
 For any questions please email me at [${answers.email}](mailto:${answers.email}).
