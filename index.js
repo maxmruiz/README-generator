@@ -68,8 +68,8 @@ promptUser()
 
  */
 
-const inquirer = require('inquirer');
-const fs = require('fs');
+import inquirer from 'inquirer';
+import fs from 'fs';
 
 const questions = [
     {
@@ -121,40 +121,40 @@ const questions = [
 ];
 
 function generateREADME(answers){
-    return `
-    # ${answers.title}
-    
-    ## Description
-    ${answers.description}
-    
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+    return`
+# ${answers.title}
 
-    ## Installation
-    ${answers.installation}
+## Description
+${answers.description}
 
-    ## Usage
-    ${answers.usage}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-    ## Contributing
-    ${answers.contributing}
+## Installation
+${answers.installation}
 
-    ## Tests
-    ${answers.tests}
+## Usage
+${answers.usage}
 
-    ## License
-    ${answers.license}
+## Contributing
+${answers.contributing}
 
-    ## Questions
-    For any questions please email me at [${answers.email}](mailto:${answers.email}).
+## Tests
+${answers.tests}
 
-    Github: ${answers.github}(https://github.com/${answers.github})
-    `;
+## License
+${answers.license}
+
+## Questions
+For any questions please email me at [${answers.email}](mailto:${answers.email}).
+
+Github: ${answers.github}(https://github.com/${answers.github})
+`;
 }
 
 function writeToFile(fileName, data) {
